@@ -1,0 +1,32 @@
+SELECT
+    *
+FROM
+    (
+    SELECT
+        f.username AS username,
+        f.profile AS PROFILE,
+        f.ispending AS ispending,
+        f.email AS email,
+        o.userid AS userid
+    FROM
+        usergrouptable o
+    LEFT JOIN users f ON
+        o.userid = f.id
+    WHERE
+        o.groupid = 92
+) userdata
+LEFT JOIN(
+    SELECT
+        c.id AS id,
+        c.fromid AS fromid,
+        SUM(c.moneypaid) AS paid,
+        SUM(c.moneyhavetopay) AS havetopay,
+        c.groupid AS groupid
+    FROM
+        groupstransactiontableanother c
+    WHERE
+        c.groupid = 92
+    GROUP BY
+        c.fromid
+) gg 
+ON userdata.userid = gg.fromid
