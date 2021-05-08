@@ -14,7 +14,7 @@
     "express": "^4.16.4",
     "express-fileupload": "^1.0.0",
     "express-session": "^1.15.6",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.7.7",
     "http-server": "^0.11.1",
     "jsreport": "^2.6.1",
     "jsreport-studio-theme-dark": "^0.2.0",
