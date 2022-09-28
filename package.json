@@ -16,7 +16,7 @@
     "express-session": "^1.15.6",
     "handlebars": "^4.0.12",
     "http-server": "^0.11.1",
-    "jsreport": "^2.6.1",
+    "jsreport": "^3.8.0",
     "jsreport-studio-theme-dark": "^0.2.0",
     "lokijs": "^1.5.5",
     "morgan": "^1.9.1",
